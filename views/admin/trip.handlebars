@@ -1,0 +1,47 @@
+
+<div class="col-sm-8">
+	<h1>Trip</h1>
+
+	<table class = "table" ng-controller = "tripCntrl">
+		<thead>
+			<tr>
+				<th>Bus No</th>
+				<th>Route No</th>
+				<th>Days</th>
+				<th>Time</th>
+				<th>Exact time</th>				
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input class="form-control" ng-model = "t.bus_no"></td>
+				<td><input class="form-control" ng-model = "t.route_id"></td>
+				<td><select class="form-control" ng-model = "t.days">
+					<option value=''>Choose days</option>
+					<option name="days" values="odd">odd</option>
+					<option name="days" values="even">even</option>
+				</td>
+				<td><select class="form-control" ng-model = "t.travelDate">
+					<option value=''>Choose time</option>
+					<option name="travelDate" values="day">day</option>
+					<option name="travelDate" values="night">night</option>
+				</td>
+				<td><input class="form-control" ng-model = "t.travelTime" placeholder="00:00 pm">		
+				</td>
+				<td><button class="btn btn-primary" ng-show="addRemove" ng-click="addTrip()">Add</button></td>
+				<td><button class="btn btn-info" ng-hide="addRemove" ng-click="updateTrip(t.id)">update</button></td>
+			</tr>
+			<tr ng-repeat = "c in tripList">
+				<td>{[{c.bus_no}]}</td>
+				<td>{[{c.route_id}]}</td>
+				<td>{[{c.days}]}</td>
+				<td>{[{c.timetodept}]}</td>
+				<td>{[{c.etimetodept}]}</td>		
+				<td><button class="btn btn-warning" ng-click = "editTrip(c.id)"> edit</button></td>
+				<td><button class="btn btn-danger" ng-click = "removeTrip(c.id)"> Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="col-sm-4"></div>

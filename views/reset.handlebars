@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="book-left-form">		
+	<form class="form-group" method="post" >
+
+		<legend>Forget Password</legend>
+		{{#if error}}
+							  {{#each error}}
+							    <div class="alert alert-danger"> {{error}}
+							    </div>
+							    {{/each}}
+						{{/if}}
+						{{#if success_msg}}							  
+							    <div class="alert alert-success"> {{success_msg}}
+							    </div>							    
+						{{/if}}
+						{{#if error_msg}}							  
+							    <div class="alert alert-danger"> {{error_msg}}
+							    </div>							    
+						{{/if}}
+		<p>New Password</p>
+		<input type="password" class="form-control"  name="password" id="password" >
+		<p>Confirm New Password</p>
+		<input type="password" class="form-control" name="repassword" id="password" >
+		<input type="submit" id="login" value="Update Password">
+	</form>
+</div>
+</div>

@@ -1,0 +1,60 @@
+
+<div class="container" ng-controller="routeEnter">
+	
+	<div class="col-sm-6" >		
+	<form>
+		<h4 >New Route</h4>
+	  <fieldset class="form-group">
+	    <label for="from">Departure</label>
+	    <input type="text" class="form-control" id="from_dept" ng-model="r.from_dept" placeholder="Departure" ng-disabled="exp">
+	  </fieldset>
+	  <fieldset class="form-group">
+	    <label for="to">Destination</label>
+	    <input type="text" class="form-control" id="to_dest" ng-model="r.to_dest" placeholder="Destination" ng-disabled="exp">
+	  </fieldset>	  
+	  <button class="btn btn-success" ng-show="routeShow" ng-click="routeSave()" ng-disabled="exp">Submit</button>
+	  <button class="btn btn-success" ng-hide="routeShow" ng-click="routeUpdate(r.id)" ng-disabled="exp">Update</button> 
+
+</form>
+<form ng-hide='newRoute'>
+	<h3>Enter stops for Route <span class="text-danger"><strong>{[{r.from_dept}]}-{[{r.to_dest}]}</strong></span></h3>
+	 <fieldset class="form-inline">
+	    <label for="stops">Pick Up places  </label>
+	    <input type="text" class="form-control" ng-model="s.stops" id="stops" placeholder="stops">
+	    <button class="btn btn-info" ng-click="saveStops(r.id)">Add</button>
+	  </fieldset>	 <span ng-repeat="p in picks">{[{p.stops}]}<a class="clear" ng-click="searchAll = null">
+    <span class="glyphicon glyphicon-remove" ng-click="removeStops(r.id,p.id)"></span>
+</a></span> <br>
+<fieldset class="form-inline">
+	    <label for="stops">Deportation </label>
+	    <input type="text" class="form-control" ng-model="d.deport_add" id="stops" placeholder="stops">
+	    <button class="btn btn-info" ng-click="saveDeport(r.id)">Add</button>
+	  </fieldset>	 <span ng-repeat="de in deport">{[{de.deport_add}]}<a class="clear" ng-click="searchAll = null">
+    <span class="glyphicon glyphicon-remove" ng-click="removeDeport(r.id,de.id)"></span>
+</a></span> <br> 	  
+	  
+</form>
+</div>
+
+<div class="col-sm-6">
+	<table class="table">
+		<tr>
+			<th>Route No</th>
+			<th>From</th>
+			<th>To</th>
+			<th></th>
+			<th></th>
+		</tr>
+		
+		<tr ng-repeat = "ro in routeList">
+				<td>{[{ro.id}]}</td>
+				<td>{[{ro.from_dept}]}</td>
+				<td>{[{ro.to_dest}]}</td>	
+				<td><button class="btn btn-warning" ng-click = "editBus(ro.id)"> edit</button></td>
+				<td><button class="btn btn-success"  ng-click="addPlace(ro.id)">Add Places</button></td>
+				<td><button class="btn btn-danger" ng-click = "remove(ro.id)"> Delete</button></td>
+			</tr>
+		
+	</table>
+</div>
+</div>

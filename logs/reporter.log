@@ -1,0 +1,82 @@
+2016-07-30T09:06:16.916Z - info: Initializing jsreport in development mode using configuration file dev.config.json
+2016-07-30T09:06:16.926Z - info: Setting process based strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2016-07-30T09:06:17.001Z - info: Searching for available extensions in E:\travelApp\
+2016-07-30T09:06:17.048Z - info: Extensions location cache not found, crawling directories
+2016-07-30T09:06:35.324Z - info: Found 25 extensions
+2016-07-30T09:06:35.459Z - debug: Writing extension locations cache to C:\Users\Jiten\AppData\Local\Temp\jsreport-temp\extensions\locations.json
+2016-07-30T09:06:35.470Z - debug: Discovered 25 extensions
+2016-07-30T09:06:35.496Z - info: Using extension jsrender
+2016-07-30T09:06:35.537Z - info: Using extension authentication
+2016-07-30T09:06:36.043Z - debug: Extension authentication was disabled
+2016-07-30T09:06:36.045Z - info: Using extension browser-client
+2016-07-30T09:06:36.526Z - info: Using extension templates
+2016-07-30T09:06:36.556Z - info: Using extension studio
+2016-07-30T09:06:36.920Z - info: Using extension debug
+2016-07-30T09:06:36.953Z - info: Using extension express
+2016-07-30T09:06:37.327Z - info: Using extension fop-pdf
+2016-07-30T09:06:37.467Z - info: Using extension handlebars
+2016-07-30T09:06:37.487Z - info: Using extension resources
+2016-07-30T09:06:37.522Z - info: Using extension fs-store
+2016-07-30T09:06:41.200Z - debug: Extension fs-store was disabled
+2016-07-30T09:06:41.203Z - info: Using extension images
+2016-07-30T09:06:42.830Z - info: Using extension authorization
+2016-07-30T09:06:42.875Z - debug: Extension authorization was disabled
+2016-07-30T09:06:42.883Z - info: Using extension licensing
+2016-07-30T09:06:43.180Z - info: Using extension phantom-pdf
+2016-07-30T09:06:43.264Z - info: Using extension text
+2016-07-30T09:06:43.276Z - info: Using extension reports
+2016-07-30T09:06:43.396Z - info: Using extension html-to-xlsx
+2016-07-30T09:06:44.130Z - info: Using extension child-templates
+2016-07-30T09:06:44.303Z - info: Using extension data
+2016-07-30T09:06:44.327Z - info: Using extension scripts
+2016-07-30T09:06:44.367Z - info: Using extension scheduling
+2016-07-30T09:06:45.214Z - info: Using extension xlsx
+2016-07-30T09:06:49.430Z - info: Using extension sample-template
+2016-07-30T09:06:49.524Z - info: Using extension public-templates
+2016-07-30T09:06:49.751Z - debug: Extension public-templates was disabled
+2016-07-30T09:06:49.998Z - info: Creating memory store
+2016-07-30T09:06:50.290Z - info: Creating default express app.
+2016-07-30T09:06:51.665Z - info: jsreport server successfully started on http port: 22757
+2016-07-30T09:06:51.715Z - warn: License not found, using free
+2016-07-30T09:06:51.857Z - info: reporter initialized
+2016-07-30T09:08:06.733Z - info: Initializing jsreport in development mode using configuration file dev.config.json
+2016-07-30T09:08:06.737Z - info: Setting process based strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2016-07-30T09:08:06.753Z - info: Searching for available extensions in E:\travelApp\
+2016-07-30T09:08:06.909Z - info: Extensions location cache contains up to date information, skipping crawling in E:\travelApp\node_modules\
+2016-07-30T09:08:07.224Z - info: Found 25 extensions
+2016-07-30T09:08:07.255Z - debug: Writing extension locations cache to C:\Users\Jiten\AppData\Local\Temp\jsreport-temp\extensions\locations.json
+2016-07-30T09:08:07.264Z - debug: Discovered 25 extensions
+2016-07-30T09:08:07.289Z - info: Using extension jsrender
+2016-07-30T09:08:07.321Z - info: Using extension authentication
+2016-07-30T09:08:07.326Z - debug: Extension authentication was disabled
+2016-07-30T09:08:07.329Z - info: Using extension browser-client
+2016-07-30T09:08:07.351Z - info: Using extension templates
+2016-07-30T09:08:07.357Z - info: Using extension studio
+2016-07-30T09:08:07.368Z - info: Using extension debug
+2016-07-30T09:08:07.374Z - info: Using extension express
+2016-07-30T09:08:07.385Z - info: Using extension fop-pdf
+2016-07-30T09:08:07.391Z - info: Using extension handlebars
+2016-07-30T09:08:07.400Z - info: Using extension resources
+2016-07-30T09:08:07.410Z - info: Using extension fs-store
+2016-07-30T09:08:07.416Z - debug: Extension fs-store was disabled
+2016-07-30T09:08:07.418Z - info: Using extension images
+2016-07-30T09:08:07.428Z - info: Using extension authorization
+2016-07-30T09:08:07.435Z - debug: Extension authorization was disabled
+2016-07-30T09:08:07.436Z - info: Using extension licensing
+2016-07-30T09:08:07.443Z - info: Using extension phantom-pdf
+2016-07-30T09:08:07.454Z - info: Using extension text
+2016-07-30T09:08:07.463Z - info: Using extension reports
+2016-07-30T09:08:07.470Z - info: Using extension html-to-xlsx
+2016-07-30T09:08:07.477Z - info: Using extension child-templates
+2016-07-30T09:08:07.484Z - info: Using extension data
+2016-07-30T09:08:07.490Z - info: Using extension scripts
+2016-07-30T09:08:07.498Z - info: Using extension scheduling
+2016-07-30T09:08:07.505Z - info: Using extension xlsx
+2016-07-30T09:08:07.513Z - info: Using extension sample-template
+2016-07-30T09:08:07.520Z - info: Using extension public-templates
+2016-07-30T09:08:07.526Z - debug: Extension public-templates was disabled
+2016-07-30T09:08:07.534Z - info: Creating memory store
+2016-07-30T09:08:07.742Z - info: Creating default express app.
+2016-07-30T09:08:07.821Z - info: jsreport server successfully started on http port: 22783
+2016-07-30T09:08:07.844Z - warn: License not found, using free
+2016-07-30T09:08:07.891Z - info: reporter initialized

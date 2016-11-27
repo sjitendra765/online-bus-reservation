@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container" style="padding:10px 5px 5px 5px; ">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-8" style="padding:10px 5px 5px 5px;">
+		<div>
+			 <canvas id="myCanvas" width="763" height="400" style="background-color: #ff3300 ; border:1px solid #d3d3d3;">
+			 </canvas>
+			 <script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.font = "15px Arial";
+ctx.fillText("वूकिंग मिति: ",20,50);
+ctx.fillText(" ",100,50);
+ctx.fillText("प्रस्थान मिति: ",20,90);
+ctx.fillText("",100,90);
+ctx.fillText("बस छुट्ने समय: ",553,50);
+ctx.fillText(" ",653,50);
+ctx.fillText("बस नं.: ",553,90);
+ctx.fillText("",653,90);
+ctx.fillText("सिट नं.: ",553,130);
+ctx.fillText("",653,130);
+ctx.fillText("नाम :",20,170);
+ctx.fillText("",100,170);
+ctx.fillText("ठेगाना :",300,170);
+ctx.fillText("",380,170);
+ctx.fillText("सम्पर्क नं:",480,170);
+ctx.fillText("",550,170);
+ var imageObj = new Image();
+
+      imageObj.onload = function() {
+        ctx.drawImage(imageObj, 170, 20,100,50);
+      };
+      imageObj.src = '../public/images/Rajdevi.jpg';
+for (var x = 20; x < 750; x += 110) {
+  ctx.moveTo(x, 200);
+  ctx.lineTo(x, 300);
+}
+
+for (var y = 200; y < 301; y += 50) {
+  ctx.moveTo(20, y);
+  ctx.lineTo(680, y);
+}
+ctx.moveTo(20,330);
+ctx.lineTo(750,330)
+ctx.strokeStyle = "#000";
+ctx.stroke();
+ctx.fillText("देखि ",25,230);
+ctx.fillText(" ",25,270);
+
+ctx.fillText("सम्म ",135,230);
+ctx.fillText("संख्या",245,230);
+ctx.fillText("दर ",355,230);
+ctx.fillText("जम्मा ",465,230);
+ctx.fillText("कैफियत",575,230);
+ctx.fillText("यो बिधुतिय मध्यमबाट बनेको टिकट हो |",30,350);
+ctx.fillText("धन्यवाद !!!",300,370);
+ctx.fillText("सम्पर्क नं: ९८४११८८४३७",500,370);
+ctx.font = "25px Arial";
+ctx.fillText("राजदेवी यातायात ",280,50);
+</script>
+
+		</div>
+	</div>
+	<div class="col-sm-2"></div>
+</div>
+</body>
+</html>

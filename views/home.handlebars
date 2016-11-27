@@ -1,0 +1,171 @@
+
+	<!-- banner -->
+	<div class="banner bus-banner">
+		<!-- container -->
+		<div class="container" >
+			<div class="col-md-4 banner-left">
+				<section class="slider2">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<div class="slider-info">
+									<img src="images/5.jpg" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="slider-info">
+									<img src="images/6.jpg" alt="">
+								</div>
+							</li>
+							<li>	
+								<div class="slider-info">
+									<img src="images/7.jpg" alt="">
+								</div>
+							</li>
+							<li>	
+								<div class="slider-info">
+									<img src="images/8.jpg" alt="">
+								</div>
+							</li>
+							<li>	
+								<div class="slider-info">
+									<img src="images/6.jpg" alt="">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!--FlexSlider-->
+			</div>
+			<div class="col-md-8 banner-right">
+				<div class="sap_tabs">	
+					<div class="booking-info about-booking-info">
+						<h2>Book Bus Tickets Online</h2>
+					</div>
+					<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">	
+						  <!---->		  	 
+									<div class="facts about-facts">
+										<div class="booking-form">
+										<link rel="stylesheet" href="css/jquery-ui.css" />
+											<!---strat-date-piker---->
+											<script>
+												$(function() {
+													$( "#datepicker,#datepicker1" ).datepicker();
+												});
+											</script>
+											<!---/End-date-piker---->
+											<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+											
+											<div class="online_reservation">
+												<div class="b_room">
+													{{#if error_msg}}
+												          <div class="alert alert-danger">
+												            {{error_msg}}
+												            <a href="#close" class="icon-remove"></a>
+												          </div>
+												          {{/if}}
+													<form type="form" method="post" action="/test">
+
+															<div class="booking_room">
+																<div class="reservation">
+																	<ul>		
+																		<li class="span1_of_1 desti">
+																			 <h5>From</h5>
+																			 <div class="book_date">
+																				 
+																					<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+																					<input type="text" placeholder="Type Departure City" class="typeahead1 input-md form-control tt-input" required="" name="from_dept"
+																					>
+																				 
+																			 </div>					
+																		 </li>
+																		 <li class="span1_of_1 left desti">
+																			 <h5>To</h5>
+																			 <div class="book_date">
+																			 
+																				<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+																				<input type="text" placeholder="Type Destination City" class="typeahead1 input-md form-control tt-input" required="" name="to_dest" >
+																			 
+																			 </div>		
+																		 </li>
+																		 <div class="clearfix"></div>
+																	</ul>
+																</div>
+																<div class="reservation">
+																	<ul>	
+																		 <li  class="span1_of_1">
+																			 <h5>Departing</h5>
+																			 <div class="book_date">
+																			 
+																				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+																				<input type="text" id="nepaliDate1" placeholder="Select date" onfocus="this.value = '';"  name="selectdate" >																
+																			 </div>		
+																		 </li>
+																		 <li class="span1_of_1 left">
+																			 <h5>Time</h5>
+																			 <!----------start section_room----------->
+																			 <div class="section_room" style="color:white;">
+																				 <b>Day</b><input type="radio" name="timeTotravel"
+																				 value="DAY"> <b>Night</b>
+																				 <input type="radio" name="timeTotravel"
+																				 value="NIGHT" >
+																			 </div>	
+																		</li>
+																		
+																		 <div class="clearfix"></div>
+																	</ul>
+																</div>
+																<div class="reservation">
+																	<ul>	
+																		 <li class="span1_of_3">
+																				<div class="date_btn">
+																					
+																						<input type="submit" class="btn bnt-success" value="Search Buses" >
+																					
+																				</div>
+																		 </li>
+																		 <div class="clearfix"></div>
+																	</ul>
+																</div>
+															</div>
+															<div class="clearfix"></div>
+												</div>
+											</div>
+											<!---->
+										</div>	
+									</div>
+					</div>	
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //banner -->
+	<div class="move-text">
+		<div class="marquee">छिटो,छरितो र सुलभ यात्रा को लागी <b>राजदेवी यातायात</b></div>
+		<script type="text/javascript" src="js/jquery.marquee.min.js"></script>
+        <script>
+		  $('.marquee').marquee({ pauseOnHover: true });
+		  //@ sourceURL=pen.js
+		</script>
+	</div>
+      
+  
+	  <script defer src="js/jquery.flexslider.js"></script>	
+	<script src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		// $(function(){
+		// 	SyntaxHighlighter.all();
+		// 	});
+			$(window).load(function(){
+			$('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			$('body').removeClass('loading');
+			}
+			});	
+			
+		});
+	</script>	

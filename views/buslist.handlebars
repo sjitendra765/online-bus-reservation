@@ -1,0 +1,70 @@
+<!-- banner -->
+	<div class="banner-bottom">
+	<div class="container" >
+		<div class ="row" style="width:100%">
+	<form class="form form-inline" method="post" action="/test" style="margin-top:5px;width:100%">
+		From <input class="form-control" name="from_dept" value="{{searchB.from_dept}}"> 
+		Time <input class="form-control" name="selectdate" id="nepaliDate1" value="{{searchB.selectdate}}">
+		To <input class="form-control" name="to_dest" value="{{searchB.to_dest}}">
+		Time <b>Day</b><input type="radio" name="timeTotravel"
+																				 value="DAY"> <b>Night</b>
+																				 <input type="radio" name="timeTotravel"
+																				 value="NIGHT" >
+			<button class="btn btn-primary" name="submit">Search Bus</button>
+	</form>
+	<h3 text-align="center"> </h3>
+	<table class = "table" >
+		<thead>
+			<tr>
+				<th>Bus</th>
+				<th>Bus No</th>
+				<th>Seats</th>
+				<th>Fare</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			 {{#each objects}}			 
+			<tr id="buslist">				
+				<td>RajDevi Travels <br>A/C delux</td>
+				<td id="bus_no">{{bus_no}}</td>
+				<td>32</td>
+				<td id="peramt">Rs.{{fare.amount}}</td>
+				<td><button class="btn btn-success viewseats" > <span>View seats</span></button></td>				
+			</tr>
+			<tr class="seats">
+				<td colspan ='5'>
+					<div class="row" style="width:100%" >
+			<div class="col-xs-12 col-sm-12 col-md-2">
+				<ul id="seatDescription">
+        			<li style="background:url('images/available_seat_img.gif') no-repeat scroll 0 0 transparent;">Available Seat</li> 
+        			<li style="background:url('images/booked_seat_img.gif') no-repeat scroll 0 0 transparent;">Booked Seat</li> 
+        			<li style="background:url('images/selected_seat_img.gif') no-repeat scroll 0 0 transparent;">Selected Seat</li>
+    			</ul>   
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4">
+				<div  id ="holder"> 
+        			<ul  id="place">
+        			</ul> 
+        		</div> 
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4" style="margin-left:50px;">
+				
+				<form class='form-group' method="post" action = "/buslist">
+					<strong>Seats No. : </strong> <input type="text" id= "seatno" name="seat_no" readonly style="outline:none;border:0;background: none;"><br>
+					<strong>Total Amount : </strong><input type="text" id= "amount" name="amount" readonly style="outline:none;border:0;background: none;">
+					<input type="submit" value="Continue Booking" class="btn btn-primary">
+				</form>
+			</div>
+		</div>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+
+	</table>
+		</div>
+		
+	</div>
+	 
+	</div>

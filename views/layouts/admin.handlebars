@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Rajdevi Yatayat | Admin Panel</title>
+  <meta name="description" content="Nepal online bus ticketing system . Rajdevi Yatayt, ticket bus, kathmandu"/>
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+  <script src="jquery/dist/jquery.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.min.js"></script>  
+  <script src="angular/angular.js"></script>
+  <script src="controllers/app.js"></script>
+</head>
+<body ng-app = "mainApp">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Admin</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/admin/bus">Bus <span class="sr-only">(current)</span></a></li>
+        <li><a href="/admin/routebus">Route</a></li>        
+        <li><a href="/admin/fare">Fares</a></li>        
+        <li><a href="/admin/trip">Trip</a></li> 
+        <li><a href="/report">Print Report</a></li>       
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search Bus">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login/logout">Log Out</a></li>        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+{{{body}}}
+</body>
+</html>

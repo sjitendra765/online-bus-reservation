@@ -1,0 +1,42 @@
+<div class="container" ng-controller = "reportgen">
+	
+	<div class="">
+		<form class="form-group" >
+	  <fieldset class="form-group">
+	    <label for="bus_no">Bus No</label>
+	    <input type="text" class="form-control" id="bus_no" name="bus_no" ng-model="u.bus_no"  placeholder="Bus No">
+	  </fieldset>
+	    <fieldset class="form-group">
+	    <label for="Date">Date</label>
+	    <input type="text" class="form-control" id="bus_no" name="dateReport" ng-model="u.dateReport" placeholder="Bus No">
+	  </fieldset>
+	   <button class="btn btn-success"  ng-click="showReport()">Print Report</button>
+	</form>
+		<button class="btn btn-danger" ng-click="exportToExcel('#tableId')">Print Report</button>
+
+	</div>
+	<div>
+		<table class="table" id = "tableId">
+			<tr>
+				<th>Bus No</th>
+				<th>Name</th>
+				<th>From</th>
+				<th>To</th>
+				<th>Seat No</th>
+				<th>Amount</th>
+
+			</tr>
+			<tr ng-repeat="c in liste">
+				<td>{[{c.bus_no}]}</td>
+				<td>{[{c.name}]}</td>
+				<td>{[{c.from_dept}]}</td>
+				<td>{[{c.to_dest}]}</td>
+				<td>{[{c.seat_no}]}</td>
+				<td>{[{c.price}]}</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+
+	</div>
+</div>

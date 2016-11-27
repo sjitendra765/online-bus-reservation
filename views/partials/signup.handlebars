@@ -1,0 +1,61 @@
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="faqs-top-grids">
+				<div class="book-grids">
+					<div class="col-md-6 book-left">
+						<div class="book-left-info">
+							<h3>Create Your Account</h3>
+						</div>
+						{{#if errors}}
+							  {{#each errors}}
+							    <div class="alert alert-danger"> {{msg}}
+							    </div>
+							    {{/each}}
+						{{/if}}
+						{{#if success_msg}}							  
+							    <div class="alert alert-success"> {{success_msg}}
+							    </div>							    
+						{{/if}}
+						{{#if error_msg}}							  
+							    <div class="alert alert-danger"> {{error_msg}}
+							    </div>							    
+						{{/if}}
+						<div class="book-left-form">
+							<form class="form-group" method="post" action="/signup">
+								<p>Name</p>
+								<input type="text" class="form-control" value="{{users.name}}" name="name" autofocus>
+								<p>Address</p>
+								<input type="text" class="form-control" value="{{users.address}}"  name="address" value=""  autofocus>
+								<p>Phone Number</p>
+								<input type="text" class="form-control" value="{{users.phone_no}}" name="phone_no" autofocus>
+								<p>Email Address</p>
+								<input type="text" class="form-control" value="{{users.email}}" name="email"  autofocus>
+								<p>Password</p>
+								<input type="password" class="form-control"  name="password" id="password" >
+								<p>Confirm Password</p>
+								<input type="password" class="form-control" name="repassword" id="password" >
+								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+								<input type="submit" id="login" value="Register">
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 book-left book-right">
+						<div class="book-left-info">
+							<h3>Recommended</h3>
+						</div>
+						<ul>
+							<li>Access booking history with upcoming trips</li>
+							<li>Print tickets and invoices</li>
+							<li>Make checkouts simpler</li>
+							<li>Enter your contact details only once</li>
+							<li>Get alerts for low fares</li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>

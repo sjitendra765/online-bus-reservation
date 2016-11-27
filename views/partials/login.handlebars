@@ -1,0 +1,44 @@
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="faqs-top-grids">
+				<div class="book-grids">
+					<div class="col-md-6 book-left">
+						<div class="book-left-info">
+							<h3>Log In</h3>
+						</div>
+						{{#if errors}}
+							  {{#each errors}}
+							    <div class="alert alert-danger"> {{msg}}
+							    </div>
+							    {{/each}}
+						{{/if}}
+						{{#if success_msg}}							  
+							    <div class="alert alert-success"> {{success_msg}}
+							    </div>							    
+						{{/if}}
+						{{#if error_msg}}							  
+							    <div class="alert alert-danger"> {{error_msg}}
+							    </div>							    
+						{{/if}}
+						<div class="book-left-form">
+							<form class="form-group" method="post" action="/login">
+								<p>Email Address</p>
+								<input type="text" class="form-control" name="username"  autofocus>
+								<p>Password</p>
+								<input type="password" class="form-control"  name="password" id="password" >								
+								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+								<input type="submit" id="login" value="Log In">
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 book-left book-right">
+						
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>

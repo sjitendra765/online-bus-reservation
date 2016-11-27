@@ -1,0 +1,51 @@
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="faqs-top-grids">
+				<div class="book-grids">
+					<div class="col-md-6 book-left">
+						{{#if errors}}
+							  {{#each errors}}
+							    <div class="alert alert-danger"> {{msg}}
+							    </div>
+							    {{/each}}
+						{{/if}}
+						<div class="book-left-info">
+							<h3>Please Provide Your Information</h3>
+						</div>
+						<div class="book-left-form">
+							<form class="form-group" method="post" action="/contact_info">
+								<p>Name</p>
+								<input type="text" class="form-control" name="name" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">	
+								<p>Phone Number</p>
+								<input type="text" class="form-control" name="phone_no" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+								<p>Email Address</p>
+								<input type="text" class="form-control" name="email" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+								<p>Place Of Pick Up</p>
+								<input type="text" class="form-control" name="address" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">								
+								<input type="submit" id="payment" value="Buy Now">
+								<input type="submit" id="book" value="Book Now">
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 book-left book-right">
+						<div class="book-left-info">
+							<h3>Recommended</h3>
+						</div>
+						<div class="book-left-bottom">
+							<h3>Benfits of <a href="/signup">Sign Up</a></h3>
+						</div>
+						<ul>
+							<li>Access booking history</li>
+							<li>Print tickets</li>
+							<li>Enter your contact details only once</li>
+							<li>Get alerts for low fares</li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>

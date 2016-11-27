@@ -1,0 +1,50 @@
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="faqs-top-grids">
+				<div class="book-grids">
+					<div class="col-md-6 book-left">
+						<div class="book-left-info">
+							<h3>View/Cancel/Reschedule your tickets by signing in</h3>
+						</div>
+						<div class="book-left-form">
+							<form action="/login" method="post" class="form-group">
+								<p>Email</p>
+								<input type="text" class="form-control" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+								<p>Password</p>
+								<input type="password" class="form-control" name="password" id="password">
+								<input type="submit" id="login" value="Sign in">
+							</form>
+							<a href="#">Forgot your password?</a>
+							<a href="/signup"> <span>SignUp</span></a>
+						</div>						
+					</div>
+					<div class="col-md-6 book-left book-right">
+						<div class="book-left-info">
+							<h3>View/print your Ticket without signing in</h3>
+						</div>
+						{{#if error_msg}}
+						<div class="alert alert-danger">
+							 {{error_msg}}
+							 <a href="#close" class="icon-remove"></a>
+						 </div>
+						 {{/if}}
+						<div class="book-left-form">
+							<form method="post" action="/booking" class="form-group">
+								<p>Email</p>
+								<input type="text" class="form-control" name="email" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+								<p>Booking Reference Number</p>
+								<input type="text" class="form-control" value="" onfocus="this.value='';" name="secret_key" onblur="if (this.value == '') {this.value ='';}">
+								<input type="submit" id="login" value="Submit">
+							</form>
+							<a href="#">How do I find my Ticket Reference Number?</a>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //banner-bottom -->

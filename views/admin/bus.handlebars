@@ -1,0 +1,45 @@
+
+<div class="container" ng-controller="busCntrl">
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
+		<h4 ng-show='busShow'>Add New Bus</h4>
+		<h4 ng-hide='busShow'>Update Bus</h4>		
+	<form class="form-group">
+	  <fieldset class="form-group">
+	    <label for="bus_no">Bus No</label>
+	    <input type="text" class="form-control" id="bus_no" name="bus_no" ng-model='b.bus_no' placeholder="Bus No">
+	  </fieldset>
+	  <fieldset class="form-group">
+	    <label for="type">Type</label>
+	    <input type="text" class="form-control" id="type" name="type" ng-model='b.type' placeholder="status">
+	  </fieldset>
+	  <fieldset class="form-group">
+	    <label for="status">Status</label>
+	    <input type="text" class="form-control" id="status" name="status" ng-model='b.status' placeholder="status">
+	  </fieldset>
+	  <button class="btn btn-success" ng-show="busShow" ng-click="saveBus()">Submit</button>
+	  <button class="btn btn-success" ng-hide="busShow" ng-click="updateBus(b.id)">Update</button>	  
+</form>
+</div>
+<div class="col-sm-4">
+	<table class="table">
+		<tr>
+			<th>Bus No</th>
+			<th>type</th>
+			<th>status</th>
+			<th></th>
+			<th></th>
+		</tr>
+		
+		<tr ng-repeat = "c in busList">
+				<td>{[{c.bus_no}]}</td>
+				<td>{[{c.type}]}</td>
+				<td>{[{c.status}]}</td>				
+				<td><button class="btn btn-warning" ng-click = "editBus(c.id)"> edit</button></td>
+				<td><button class="btn btn-danger" ng-click = "removeBus(c.id)"> Delete</button></td>
+			</tr>
+		
+	</table>
+	</table>
+</div>
+</div>

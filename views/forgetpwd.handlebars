@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="book-left-form">		
+	<form class="form-group" method="post" action="/forget_password">
+
+		<legend>Forget Password</legend>
+		{{#if error}}
+							  {{#each error}}
+							    <div class="alert alert-danger"> {{error}}
+							    </div>
+							    {{/each}}
+						{{/if}}
+						{{#if success_msg}}							  
+							    <div class="alert alert-success"> {{success_msg}}
+							    </div>							    
+						{{/if}}
+						{{#if error_msg}}							  
+							    <div class="alert alert-danger"> {{error_msg}}
+							    </div>							    
+						{{/if}}
+		<p>Email Address</p>
+		<input type="text" class="form-control" name="email" style="width:400px" autofocus><br>
+		<input type="submit" id="login" value="Reset Password">
+	</form>
+</div>
+</div>

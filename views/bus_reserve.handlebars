@@ -1,0 +1,74 @@
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="faqs-top-grids">
+				<div class="book-grids">
+					<div class="col-md-6 book-left">
+						<div class="book-left-info">
+							<h3>Reserve Bus</h3>
+						</div>
+						{{#if errors}}
+							  {{#each errors}}
+							    <div class="alert alert-danger"> {{msg}}
+							    </div>
+							    {{/each}}
+						{{/if}}
+						{{#if success_msg}}							  
+							    <div class="alert alert-success"> {{success_msg}}
+							    </div>							    
+						{{/if}}
+						{{#if error_msg}}							  
+							    <div class="alert alert-danger"> {{error_msg}}
+							    </div>							    
+						{{/if}}
+						<div class="book-left-form">
+							<form class="form-group" method="post" action="/bus_reserve">
+								<p>Name</p>
+								<input type="text" class="form-control" placeholder="Enter Full Name"  name="name" autofocus>
+								<p>Address</p>
+								<input type="text" class="form-control" placeholder="Address"  name="address" value=""  autofocus>
+								<p>Phone Number</p>
+								<input type="text" class="form-control" placeholder="Phone Number"  name="phone_no" autofocus>
+								<p>From</p>
+								<input type="text" class="form-control" placeholder="From" name="from_dept"  autofocus>
+								<p>to</p>
+								<input type="text" class="form-control" placeholder="To" name="to_dest" id="to_dest" >
+								<p>No of Bus</p>
+								<select name="no_of_bus" class="form-control">
+								  <option value="">Select Number Of Bus</option>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								</select> <br>
+								<p>No of Days</p>
+								<select name="no_of_days" class="form-control">
+								  <option value="">Select Number Of Days</option>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								</select> <br>
+								<p>Type Of Bus</p>
+								<select name="type_of_days" class="form-control">
+								  <option value="">Select Type Of Bus</option>
+								  <option value="ac">AC</option>
+								  <option value="non-ac">NON-AC</option>
+								 </select><br>
+								<input type="submit" id="login" value="Reserve">
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 book-left book-right">
+						<div class="book-left-info">
+							<h3>Recommended</h3>
+						</div>
+						<ul>
+							<li>test</li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>

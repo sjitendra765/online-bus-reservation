@@ -1,0 +1,11 @@
+<div class="banner-bottom" >
+	<div class="container">
+	{{#if error_msg}}							  
+							    <div class="alert alert-danger"> {{error_msg}}
+							    </div>							    
+	{{/if}}
+	<div>Remember  this Key for printing ticket in future : <strong style="color:red">{{secret_key}}</strong></div>
+	<button class="btn btn-primary">Confirm Seats</button>
+	<button class="btn btn-danger" ><a href="/getticket">Get Ticket</a></button>
+</div>
+</div>

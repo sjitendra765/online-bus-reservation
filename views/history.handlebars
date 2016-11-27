@@ -1,0 +1,25 @@
+<div class="container">
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Travel From</th>
+			<th>To</th>
+			<th>Seat/s</th>
+			<th>Amount</th>
+			<th></th>
+		</tr>
+		{{#each ticket}}
+		<tr>
+			<td>{{name}}</td>
+			<td>{{dateToTravel}}</td>
+			<td>{{from_dept}}</td>
+			<td>{{to_dest}}</td>
+			<td>{{seat_no}}</td>
+			<td>{{price}}</td>
+			<td><span> <a href="/history/printTicket/{{id}}" class="btn btn-success">Print Ticket</a></span>
+				<span> <a href="/history/delticket" class="btn btn-danger">Cancel Ticket</a></span></td>
+		</tr>
+		{{/each}}
+	</table>
+</div>
